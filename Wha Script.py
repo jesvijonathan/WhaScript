@@ -13,7 +13,7 @@ driver.get('https://web.whatsapp.com/')
 name = "~"       #Wha Info For Storing Target Name
 msg = "~"        #Wha Info For The Msg To Send
 count = 0       #Wha Info For No. Of Loops
-inp = 0         #To Store Usr Input In Menu
+inp = 0         #To Store Usr Input In Menus
 
 
 #Begin Text Spam Loop
