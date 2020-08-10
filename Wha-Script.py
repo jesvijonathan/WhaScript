@@ -1,7 +1,6 @@
 # Wha-Script
-# By @JesviJonathan
 # v0.01 | 11.Aug.2020
-
+# By @JesviJonathan
 
 #Import Required Libraries
 from selenium import webdriver
