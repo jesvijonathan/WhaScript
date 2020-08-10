@@ -83,13 +83,3 @@ while True:
     menu()                #Call Menu Func
     inp = input("> ")     #Collect Usr Inp For Menu
     do()                  #Do Condition
-
-
-    #text from txt files,
-    #loop stop at any point without crashing
-    #send imgs, mp3, video (media)
-    #show percentage and count no.
-    #ability to auto respond to chat
-    #auto list available targets to select from
-    #Convert Into Executable & Addd Gui
-    #just
