@@ -14,26 +14,27 @@ driver.get('https://web.whatsapp.com/')
 
 
 #Initializing Used/Global Variables
+version = 0.01   #Version Info
 name = "~"       #Wha Info For Storing Target Name
 msg = '~'        #Wha Info For The Msg To Send
 count = 0        #Wha Info For No. Of Loops
 inp = 0          #To Store Usr Input In Menus
 
 
-#Check For Faults
+#Check For Faults Before Start
 def check():
     global inp
 
-    if name == "~":
+    if name == "~":         #Check For Empty Name Variable
         print("\n! Target/Group Name Not Entered !")
-        fl=1
-    if msg == '~':
+        fl=1                #Turn Flag On
+    if msg == '~':          #Check For Empty Msg Variable
         print("\n! Spam Text Not Entered !")
-        fl=1
-    if fl == 1:
+        fl=1                #Turn Flag On
+    if fl == 1:             #Re Divert To Menu
         time.sleep(3)
         inp = 0
-    else:
+    else:                   #If Everything Good, Do Normal Code
         return 0
 
 
@@ -50,8 +51,14 @@ def start():
 
 #Selects Entered Target's Name
 def tar():
-    user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(name))   #Finds Target's Name
-    user.click()                                                                #Clicks On Targets Name
+    global name
+    try:
+        user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(name))   #Finds Target's Name
+        user.click()                                                                #Clicks On Targets Name
+    except:
+        print("\n! No Such Name/Group/Target Found !")
+        name = "~"
+        time.sleep(3)
 
 
 #*Display The Menu OF The Program
@@ -85,9 +92,11 @@ def do():
         if check() == 0:                                #Check Usr Field Before Start
             start()                                     #Start The Program
     if inp == "5":     
-        driver.close()                                  #Close Browser Window
-        print("\nProgramed By @JesviJonatham")          #Developer Credits
-        quit()                                          #Quit Program
+        try:
+            driver.close()                              #Close Browser Window
+        finally:
+            print("\nWha-Script v{0} Programed By @JesviJonatham".format(version))      #Developer Credits
+            quit()                                      #Quit Program
 
 
 #First Time Entry, Get The User To Scan The QR Code
@@ -95,7 +104,7 @@ input('\nScan The QR Code & Press Enter ->')       #Wait For Usr To Respond
 
 
 while True:
-    print("\n\n----  What-Script  ----")    #Program Title
+    print("\n\n----  What-Script v{0}  ----".format(version))    #Program Title
     menu()                  #Call Menu Func
     inp = input("\n> ")     #Collect Usr Inp For Menu
     do()                    #Do Condition
