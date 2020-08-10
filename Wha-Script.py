@@ -1,4 +1,4 @@
-#Wha Script 
+#Wha-Script 
 #v0.01 | 11.8.2020
 #Developed By @JesviJonathan
 
