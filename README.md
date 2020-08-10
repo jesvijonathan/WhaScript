@@ -1,5 +1,6 @@
-# Wha-Script, Developed By @jesvijonathan
-# v0.01 | 11.Aug.2020 
+# Wha-Script
+# By @JesviJonathan
+# v0.01 | 11.Aug.2020
 
 Hey folks reading this document,
 Wha Script is a automation program in whatsapp to automat to make things just a lil better for you....

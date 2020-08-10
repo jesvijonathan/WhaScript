@@ -1,5 +1,6 @@
-#Wha-Script Developed By @JesviJonathan
-#v0.01 | 11.Aug.2020
+# Wha-Script
+# By @JesviJonathan
+# v0.01 | 11.Aug.2020
 
 
 #Import Required Libraries
@@ -15,9 +16,26 @@ driver.get('https://web.whatsapp.com/')
 
 #Initializing Used/Global Variables
 name = "~"       #Wha Info For Storing Target Name
-msg = "~"        #Wha Info For The Msg To Send
-count = 0       #Wha Info For No. Of Loops
-inp = 0         #To Store Usr Input In Menus
+msg = '~'        #Wha Info For The Msg To Send
+count = 0        #Wha Info For No. Of Loops
+inp = 0          #To Store Usr Input In Menus
+
+
+#Check For Faults
+def check():
+    global inp
+
+    if name == "~":
+        print("\n! Target/Group Name Not Entered !")
+        fl=1
+    if msg == '~':
+        print("\n! Spam Text Not Entered !")
+        fl=1
+    if fl == 1:
+        time.sleep(3)
+        inp = 0
+    else:
+        return 0
 
 
 #Begin Text Spam Loop
@@ -37,14 +55,6 @@ def tar():
     user.click()                                                                #Clicks On Targets Name
 
 
-#First Time Entry
-def firsttime():
-    name = input('\nEnter Group/Target Name : ')   #Collects Target Name
-    tar()                                          #Searchs for Target
-    msg = input('Text To Send : ')                 #Gets Text Field
-    count = int(input('No. Of count : '))          #Gets No. Of Loop
-
-
 #*Display The Menu OF The Program
 def menu():
     global name    #Imported Global Variable
@@ -52,11 +62,11 @@ def menu():
     global count   #Imported Global Variable
     global inp     #Imported Global Variable
 
-    print("\n1. Change Target ( : " + name + ")")            #To Change/Display Target Name
-    print("2. Change Text ( : "     + msg + ")")             #To Change/Display Text Msg Field
-    print("3. Change Count ( : "    + str(count) + ")")      #To Display Count No. (Converte To String Before Displaying)
-    print("4. Start")                                       #Show Start
-    print("5. Quit")                                        #Show Quit 
+    print("\n1. Group/Target Name ( : " + name + ")")            #To Change/Display Target Name
+    print("2. Text Field ( : '"     + msg + "')")                #To Change/Display Text Msg Field
+    print("3. Loop Count ( : "    + str(count) + ")")            #To Display Count No. (Converte To String Before Displaying)
+    print("4. Start")                                            #Show Start
+    print("5. Quit")                                             #Show Quit 
 
 
 def do():
@@ -73,13 +83,20 @@ def do():
     if inp == "3":      
         count = int(input('\nNo. Of count : '))         #Get No. Loop
     if inp == "4":
-        start()                                         #Start The Program
+        if check() == 0:                                #Check Usr Field Before Start
+            start()                                     #Start The Program
     if inp == "5":     
         driver.close()                                  #Close Browser Window
+        print("\nProgramed By @JesviJonatham")          #Developer Credits
         quit()                                          #Quit Program
 
 
+#First Time Entry, Get The User To Scan The QR Code
+input('\nScan The QR Code & Press Enter ->')       #Wait For Usr To Respond
+
+
 while True:
-    menu()                #Call Menu Func
-    inp = input("> ")     #Collect Usr Inp For Menu
-    do()                  #Do Condition
+    print("\n\n----  What-Script  ----")    #Program Title
+    menu()                  #Call Menu Func
+    inp = input("\n> ")     #Collect Usr Inp For Menu
+    do()                    #Do Condition
