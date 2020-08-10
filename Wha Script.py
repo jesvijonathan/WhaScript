@@ -88,4 +88,4 @@ while True:
     #ability to auto respond to chat
     #auto list available targets to select from
     #Convert Into Executable & Addd Gui
-    #just for fun
+    #just
