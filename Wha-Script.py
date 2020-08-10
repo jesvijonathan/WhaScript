@@ -1,6 +1,6 @@
-#Wha-Script 
-#v0.01 | 11.8.2020
-#Developed By @JesviJonathan
+#Wha-Script Developed By @JesviJonathan
+#v0.01 | 11.Aug.2020
+
 
 #Import Required Libraries
 from selenium import webdriver

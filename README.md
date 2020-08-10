@@ -1,6 +1,5 @@
-# Wha-Script
-# v0.01 | 11.8.2020
-# Developed By @jesvijonathan
+# Wha-Script, Developed By @jesvijonathan
+# v0.01 | 11.Aug.2020 
 
 Hey folks reading this document,
 Wha Script is a automation program in whatsapp to automat to make things just a lil better for you....
@@ -9,7 +8,7 @@ THiS PrOgRaM wAS MaDe PuREly JUST for fUN !
 
 ----------------------------------
 
-Wha Script's Dependecies are limited to just a decent Os/Platform with Chrome and Chromedriver installed
+Wha Script's Dependecies are limited to just a decent Os/Platform (Windows,Linux,Mac) with Python(v3.7.7), Chrome(v84) and Chromedriver(v84) installed
 
 Do note to place 'chromedriver.exe. @ root of C: drive ('C:/chromedrive.exe') before running the script
 
