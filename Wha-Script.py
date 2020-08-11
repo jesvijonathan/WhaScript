@@ -9,9 +9,13 @@ import sys
 
 
 #Set The Webdriver & Host To Open
-driver = webdriver.Chrome("C:/chromedriver.exe")       #'chromedriver.exe' Of Your Chrome Version Must Placed In The Specific Path Mentioned
-driver.get('https://web.whatsapp.com/')
-
+def invoke():
+    try:
+        driver = webdriver.Chrome("C:/chromedriver.exe")       #'chromedriver.exe' Of Your Chrome Version Must Placed In The Specific Path Mentioned
+        driver.get('https://web.whatsapp.com/')
+    except:
+        input("Oops !, Something Wednt Wrong ! Press Enter To Try Again...")
+        invoke()
 
 #Initializing Used/Global Variables
 version = 0.01   #Version Info
@@ -19,23 +23,21 @@ name = "~"       #Wha Info For Storing Target Name
 msg = '~'        #Wha Info For The Msg To Send
 count = 0        #Wha Info For No. Of Loops
 inp = 0          #To Store Usr Input In Menus
+fi = 0
 
 
 #Check For Faults Before Start
 def check():
     global inp
-
+    global f1
     if name == "~":         #Check For Empty Name Variable
         print("\n! Target/Group Name Not Entered !")
         fl=1                #Turn Flag On
-    if msg == '~':          #Check For Empty Msg Variable
+    elif msg == '~':          #Check For Empty Msg Variable
         print("\n! Spam Text Not Entered !")
         fl=1                #Turn Flag On
-    if fl == 1:             #Re Divert To Menu
-        time.sleep(3)
-        inp = 0
-    else:                   #If Everything Good, Do Normal Code
-        return 0
+           #If Everything Good, Do Normal Code
+    return 0
 
 
 #Begin Text Spam Loop
@@ -43,6 +45,8 @@ def start():
     print("\nPress 'CTR+C' To Break The Loop...")       #A Lil Info To Break The Loop, Not Perfect As It Terminates The Program
 
     for i in range(count):
+        b = str((i/count)*100) + "%" + " Complete... | (" + str(i) + "/" + str(count) + ")"
+        print (b, end="\r")
         msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')   #Finds Msg Box (Still Confused By The Xpath Name)
         msg_box.send_keys(msg)                                                                      #Selectes & Enters The Text Info Msg Box
         button = driver.find_element_by_class_name('_1U1xa')                                        #Finds Enter Key WIth Class Name
@@ -97,6 +101,9 @@ def do():
         finally:
             print("\nWha-Script v{0} Programed By @JesviJonatham".format(version))      #Developer Credits
             quit()                                      #Quit Program
+
+
+invoke()
 
 
 #First Time Entry, Get The User To Scan The QR Code
