@@ -1,18 +1,17 @@
 # NEW README
 
-Program: WhaScript-ADB 
-Developed by Jesvi Jonathan
-Use : This script is intended for bulk messaging numbers in whatsapp using an android
+## Program: WhaScript-ADB 
+## Developed by Jesvi Jonathan
+## Use : This script is intended for bulk messaging numbers in whatsapp using an android
 
 
-Steps :
-
-* connect your android device to pc & make sure adb debugging is enabled in developer mode
-* enter the phone number list in "number_list.txt" & make sure every number is seperated by line break (next line/enter)
-* enter the text that is to be sent in "send_text.txt" and save it
-* run the "whascript-adb jesvi.bat" program and check for a prompt on your device, add your pc to trusted pc list (if already done before, the prompt will not occur & you can continue as usual)
-* press enter to continue when prompted
-* the program will now do its task..
+## Steps :
+- connect your android device to pc & make sure adb debugging is enabled in developer mode
+- enter the phone number list in "number_list.txt" & make sure every number is seperated by line break (next line/enter)
+- enter the text that is to be sent in "send_text.txt" and save it
+- run the "whascript-adb jesvi.bat" program and check for a prompt on your device, add your pc to trusted pc list (if already done before, the prompt will not occur & you can continue as usual)
+- press enter to continue when prompted
+- the program will now do its task..
 
 & your welcome ;)
 
