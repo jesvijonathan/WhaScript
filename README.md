@@ -1,8 +1,8 @@
 # NEW README
 
-## Program: WhaScript-ADB 
-## Developed by Jesvi Jonathan
-## Use : This script is intended for bulk messaging numbers in whatsapp using an android
+### Program: WhaScript-ADB 
+### Developed by Jesvi Jonathan
+### Use : This script is intended for bulk messaging numbers in whatsapp using an android
 
 
 ## Steps :
