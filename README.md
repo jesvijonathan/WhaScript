@@ -6,6 +6,7 @@
 
 
 ## Steps :
+- download and extract package in youe pc
 - connect your android device to pc & make sure adb debugging is enabled in developer mode
 - enter the phone number list in "number_list.txt" & make sure every number is seperated by line break (next line/enter)
 - enter the text that is to be sent in "send_text.txt" and save it
