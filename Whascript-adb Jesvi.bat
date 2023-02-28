@@ -19,7 +19,7 @@ echo.
 adb kill-server
 adb devices
 
-set my_no="7010493945"
+set my_no="000000000"
 set text="test_text_here, change content in send_text.txt"
 
 echo.
